@@ -5,7 +5,7 @@ class CustomerService:
         
         def contact_us(self,section):
             if section =='email': 
-                print(f'Kindly your email to {self.email} for any support')
+                print(f'kindly your email to {self.email} for any support')
                 
             elif section =='phone_number': 
                 print(f'Kindly reach out {self.phone_number} for any support')
