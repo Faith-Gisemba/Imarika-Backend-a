@@ -1,24 +1,43 @@
 class User:
-    def __init__(self, user_type, username, password,email):
+    registered_users = {}
+
+    def __init__(self, user_type, username, password, email):
         self.user_type = user_type
         self.username = username
-        self.password=password
+        self.password = password
         self.email = email
-    
+
     def register(self):
         self.user_type = input("Enter user type (seller or customer): ")
         self.username = input("Enter username: ")
         self.password = input("Enter password: ")
         self.email = input("Enter email: ")
 
-        new_user = User(self.user_type,self.username, self.password, self.email)
+        User.registered_users[self.username] = self.password
+
+        new_user = User(self.user_type, self.username, self.password, self.email)
         return new_user
-    
+
     def login(self):
         username_input = input("Enter username: ")
         password_input = input("Enter password: ")
-        
-        if username_input == self.username and password_input == self.password:
+
+        if username_input in User.registered_users and User.registered_users[username_input] == password_input:
             print("Login was successful!")
         else:
             print("Invalid username or password.")
+
+##Instances of a user registering
+user1 = User("customer", "Maxime", "password123", "maxime8@example.com")
+user1.register()
+
+user2 = User("seller", "Aisha", "password456", "aishajuma17@example.com")
+user2.register()
+
+##Login instances
+user1.login()
+user2.login()
+
+
+
+
