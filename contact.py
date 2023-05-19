@@ -7,7 +7,7 @@ class CustomerService:
         if section == 'email':
             print(f"Kindly send your email to {self.email} for any support.")
         elif section == 'phone_number':
-            print(f"Kindly reach out to {self.phone_number} for any support.")
+            print(f"Kindly reach out to {self.phone_number} for any Support.")
         else:
             print("You selected an invalid section. Please try again.")
 
