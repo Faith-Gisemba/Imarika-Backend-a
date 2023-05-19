@@ -16,7 +16,9 @@ class User:
         User.registered_users[self.username] = self.password
 
         new_user = User(self.user_type, self.username, self.password, self.email)
+        print("User has registered successfully!")
         return new_user
+
 
     def login(self):
         username_input = input("Enter username: ")
