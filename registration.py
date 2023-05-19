@@ -28,10 +28,10 @@ class User:
             print("Invalid username or password.")
 
 ##Instances of a user registering
-user1 = User("customer", "Maxime", "password123", "maxime8@example.com")
+user1 = User("customer", "Maxime", "password123", "maxime8@yahoo.com")
 user1.register()
 
-user2 = User("seller", "Aisha", "password456", "aishajuma17@example.com")
+user2 = User("seller", "Aisha", "password456", "aishajuma17@gmail.com")
 user2.register()
 
 ##Login instances
