@@ -12,7 +12,7 @@ class Payment:
         else:
             balance -= total
             self.ordering.append((customer, total))
-            return "Transaction successful"
+            return "Transaction Successful"
 
 
 
