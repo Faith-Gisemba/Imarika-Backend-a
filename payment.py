@@ -1,8 +1,7 @@
 class Payment:
-    def __init__(self):
+    def __init__(self,ordering):
         self.ordering = []
     def make_payment(self, customer, total, balance):
-
         if total <= 0:
             return "Invalid amount"
         elif balance < 0:
@@ -13,12 +12,21 @@ class Payment:
             balance -= total
             self.ordering.append((customer, total))
             return "Transaction Successful"
+            
+payment = Payment( [400])
+result = payment.make_payment('Susan',2000,2200)
+print(result)
 
 
 
-payment = Payment('Susan',1000)
-result = payment.make_payment(500)
-print(result) 
+
+
+
+
+
+
+
+
 
 
 
