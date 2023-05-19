@@ -4,23 +4,25 @@ class Category:
         self.description = description
         self.products = []
     def add_product(self, product):
-        if product in self.products:
+        if product not in self.products:
             self.products.append(product)
-            return f"{name} was added into the category"
+            return f"{product} was added to the category"
         else:
-            return f"{name} Already exist"
+            return f"{product} already exists in the category"
     def remove_product(self, product):
         if product in self.products:
             self.products.remove(product)
-            return f"{name} Is removed from the category"
+            return f"{product} is removed from the category"
         else:
-            return f"{name}does not exist in this category"
+            return f"{product} does not exist in this category"
     def update_description(self, new_description):
         self.description = new_description
-        return f"{name} description was updated"
-        category=new Category(name)
-
-
-        category= Category("mangoes","ripe medium-size")
-        category.name("oranges")
-        category.description("green oranges")
+        return f"{self.name} description was updated"
+        
+category = Category("mangoes", "ripe medium-size")
+add_product_result = category.add_product("oranges")
+print(add_product_result)
+update_description_result = category.update_description("green oranges")
+print(update_description_result)
+remove_product_result = category.remove_product("oranges")
+print(remove_product_result)
