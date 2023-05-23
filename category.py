@@ -19,7 +19,7 @@ class Category:
         self.description = new_description
         return f"{self.name} description was updated"
         
-category = Category("mangoes", "ripe medium-size")
+category = Category("mangoess", "ripe medium-size")
 add_product_result = category.add_product("oranges")
 print(add_product_result)
 update_description_result = category.update_description("green oranges")
